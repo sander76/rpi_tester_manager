@@ -24,7 +24,7 @@ def clean(ctx):
 
     if (Path.home() / "test_configs_bak").exists():
         print("removing test_configs_folder")
-        ctx.sudo(f"rm test_configs_bak -r -y")
+        ctx.sudo("rm test_configs_bak -r -y")
 
 
 @task(make_folders)
