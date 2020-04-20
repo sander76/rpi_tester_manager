@@ -20,7 +20,7 @@ def make_folders(ctx):
 def clean(ctx):
     if (Path.home() / "squid_nodes").exists():
         print("moving squid nodes folder")
-        ctx.run(f"mv ~/squid_nodes {REPO_FOLDER}")
+        ctx.run("mv ~/squid_nodes {}".format(REPO_FOLDER))
 
     if (Path.home() / "test_configs_bak").exists():
         print("removing test_configs_folder")
